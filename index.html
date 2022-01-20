@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Gorjetas</title>
+</head>
+<body>
+    <div id="container">
+        <div>
+            <h1 class="title">Calculadora de Gorjetas</h1>
+        </div>
+        <div>
+            <form class="tipsForm" id="tipsForm">
+                <label for="bill">
+                    <p>Quanto ficou a conta?</p> 
+                </label>
+                <p><input type="number" placeholder="R$100" id="bill" class="formInput" required></p>
+                <label for="serviceQual">
+                    <p>Como foi o seu serviço?</p>
+                </label>
+                <p>
+                    <select id="serviceQual" class="formSelect" required>
+                        <option value="null" disabled selected>--Escolha uma opção--</option>
+                        <option value="0.30">30% - Incrível</option>
+                        <option value="0.20">20% - Bom</option>
+                        <option value="0.15">15% - Aceitável</option>
+                        <option value="0.10">10% - Ruim</option>
+                        <option value="0.05">5% - Péssimo</option>
+                    </select>
+                </p>
+                <label for="people">
+                    <p>Quantas pessoas vão dividir a conta?</p>
+                </label>
+                <p>
+                    <input type="number" placeholder="2" name="people" id="people" class="formInput" required>
+                </p>
+                <button type="submit" class="formSubmit">Calcular</button>
+            </form>
+        </div>
+        <div id="totalTip">
+            Gorgeta Total:
+        </br>
+            <span id="tip">$ 00.00</span>
+        </div> 
+        <div id="totalTips">
+            Gorgeta por pessoa:
+        </br>
+        <span id="tips">$ 00.00</span>
+        </div>   
+    </div>
+    <script type="text/javascript" src="scripts.js"></script>
+</body>
+</html>
